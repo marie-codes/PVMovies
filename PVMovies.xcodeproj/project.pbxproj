@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383B0F812EA49AF1A400E62A /* Pods_PVMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56D82A9C41DFC2CBE0FEE36 /* Pods_PVMovies.framework */; };
 		906A4DC91F16737C000718C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DC81F16737C000718C6 /* AppDelegate.swift */; };
 		906A4DCE1F16737C000718C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCC1F16737C000718C6 /* Main.storyboard */; };
 		906A4DD01F16737C000718C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCF1F16737C000718C6 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A61A351DBEBF86926F7989B /* Pods-PVMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-PVMovies/Pods-PVMovies.release.xcconfig"; sourceTree = "<group>"; };
 		906A4DC51F16737C000718C6 /* PVMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PVMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		906A4DC81F16737C000718C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		906A4DCD1F16737C000718C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		906A4DE81F167582000718C6 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		906A4DEA1F167590000718C6 /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		906A4DEC1F167599000718C6 /* DetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		B048F40410FEF04E5C3A198E /* Pods-PVMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PVMovies/Pods-PVMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		D56D82A9C41DFC2CBE0FEE36 /* Pods_PVMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PVMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383B0F812EA49AF1A400E62A /* Pods_PVMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A89C6463AF941227F9A1140 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B048F40410FEF04E5C3A198E /* Pods-PVMovies.debug.xcconfig */,
+				3A61A351DBEBF86926F7989B /* Pods-PVMovies.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		906A4DBC1F16737C000718C6 = {
 			isa = PBXGroup;
 			children = (
 				906A4DC71F16737C000718C6 /* PVMovies */,
 				906A4DC61F16737C000718C6 /* Products */,
+				1A89C6463AF941227F9A1140 /* Pods */,
+				B4FD271CD3F669F803973B8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +138,14 @@
 			name = DetailsModule;
 			sourceTree = "<group>";
 		};
+		B4FD271CD3F669F803973B8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D56D82A9C41DFC2CBE0FEE36 /* Pods_PVMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 906A4DD71F16737C000718C6 /* Build configuration list for PBXNativeTarget "PVMovies" */;
 			buildPhases = (
+				97BFE8AF3B96EBE9AD9C06EB /* [CP] Check Pods Manifest.lock */,
 				906A4DC11F16737C000718C6 /* Sources */,
 				906A4DC21F16737C000718C6 /* Frameworks */,
 				906A4DC31F16737C000718C6 /* Resources */,
+				FC417CFE76B6E076AFD9CD44 /* [CP] Embed Pods Frameworks */,
+				C101E9183AA8AEE9ABF7673C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,6 +216,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		97BFE8AF3B96EBE9AD9C06EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C101E9183AA8AEE9ABF7673C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PVMovies/Pods-PVMovies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC417CFE76B6E076AFD9CD44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PVMovies/Pods-PVMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		906A4DC11F16737C000718C6 /* Sources */ = {
@@ -323,6 +398,7 @@
 		};
 		906A4DD81F16737C000718C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B048F40410FEF04E5C3A198E /* Pods-PVMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LL5C5F8ENK;
@@ -336,6 +412,7 @@
 		};
 		906A4DD91F16737C000718C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A61A351DBEBF86926F7989B /* Pods-PVMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LL5C5F8ENK;
