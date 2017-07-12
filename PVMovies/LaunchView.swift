@@ -10,12 +10,14 @@ import UIKit
 
 class LaunchView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: Animation
+    
+    func animateLogo(completion: @escaping () -> Void) {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: { 
+            
+            self.layoutIfNeeded()
+        }) { _ in
+            completion()
+        }
     }
-    */
-
 }

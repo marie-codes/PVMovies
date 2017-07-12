@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		383B0F812EA49AF1A400E62A /* Pods_PVMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56D82A9C41DFC2CBE0FEE36 /* Pods_PVMovies.framework */; };
+		9025991E1F16A1E300F3123E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9025991D1F16A1E300F3123E /* Launch.storyboard */; };
+		902599211F16A2B200F3123E /* TVShowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599201F16A2B200F3123E /* TVShowsView.swift */; };
+		902599231F16A2BC00F3123E /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599221F16A2BC00F3123E /* TVShowsViewController.swift */; };
 		906A4DC91F16737C000718C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DC81F16737C000718C6 /* AppDelegate.swift */; };
 		906A4DCE1F16737C000718C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCC1F16737C000718C6 /* Main.storyboard */; };
 		906A4DD01F16737C000718C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCF1F16737C000718C6 /* Assets.xcassets */; };
 		906A4DD31F16737C000718C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DD11F16737C000718C6 /* LaunchScreen.storyboard */; };
-		906A4DDE1F16745C000718C6 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DDD1F16745C000718C6 /* AppNavigationController.swift */; };
 		906A4DE31F167537000718C6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DE21F167537000718C6 /* LaunchViewController.swift */; };
 		906A4DE51F16755B000718C6 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DE41F16755B000718C6 /* LaunchView.swift */; };
 		906A4DE71F16756D000718C6 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DE61F16756D000718C6 /* MoviesViewController.swift */; };
@@ -23,13 +25,15 @@
 
 /* Begin PBXFileReference section */
 		3A61A351DBEBF86926F7989B /* Pods-PVMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-PVMovies/Pods-PVMovies.release.xcconfig"; sourceTree = "<group>"; };
+		9025991D1F16A1E300F3123E /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		902599201F16A2B200F3123E /* TVShowsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsView.swift; sourceTree = "<group>"; };
+		902599221F16A2BC00F3123E /* TVShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
 		906A4DC51F16737C000718C6 /* PVMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PVMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		906A4DC81F16737C000718C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		906A4DCD1F16737C000718C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		906A4DCF1F16737C000718C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		906A4DD21F16737C000718C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		906A4DD41F16737C000718C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		906A4DDD1F16745C000718C6 /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		906A4DE21F167537000718C6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		906A4DE41F16755B000718C6 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		906A4DE61F16756D000718C6 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9025991F1F16A27300F3123E /* TVSeriesModule */ = {
+			isa = PBXGroup;
+			children = (
+				902599221F16A2BC00F3123E /* TVShowsViewController.swift */,
+				902599201F16A2B200F3123E /* TVShowsView.swift */,
+			);
+			name = TVSeriesModule;
+			sourceTree = "<group>";
+		};
+		902599241F16A2FF00F3123E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		906A4DBC1F16737C000718C6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +105,9 @@
 				906A4DDC1F1673B6000718C6 /* MainApp */,
 				906A4DDF1F1674EC000718C6 /* LaunchModule */,
 				906A4DE01F1674F4000718C6 /* MoviesModule */,
+				9025991F1F16A27300F3123E /* TVSeriesModule */,
 				906A4DE11F167505000718C6 /* DetailsModule */,
+				902599241F16A2FF00F3123E /* Shared */,
 				906A4DDB1F16739C000718C6 /* Supporting */,
 			);
 			path = PVMovies;
@@ -105,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				906A4DC81F16737C000718C6 /* AppDelegate.swift */,
-				906A4DDD1F16745C000718C6 /* AppNavigationController.swift */,
 				906A4DCC1F16737C000718C6 /* Main.storyboard */,
 			);
 			name = MainApp;
@@ -116,6 +137,7 @@
 			children = (
 				906A4DE21F167537000718C6 /* LaunchViewController.swift */,
 				906A4DE41F16755B000718C6 /* LaunchView.swift */,
+				9025991D1F16A1E300F3123E /* Launch.storyboard */,
 			);
 			name = LaunchModule;
 			sourceTree = "<group>";
@@ -211,6 +233,7 @@
 			files = (
 				906A4DD31F16737C000718C6 /* LaunchScreen.storyboard in Resources */,
 				906A4DD01F16737C000718C6 /* Assets.xcassets in Resources */,
+				9025991E1F16A1E300F3123E /* Launch.storyboard in Resources */,
 				906A4DCE1F16737C000718C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,13 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902599231F16A2BC00F3123E /* TVShowsViewController.swift in Sources */,
 				906A4DC91F16737C000718C6 /* AppDelegate.swift in Sources */,
 				906A4DE71F16756D000718C6 /* MoviesViewController.swift in Sources */,
 				906A4DE51F16755B000718C6 /* LaunchView.swift in Sources */,
 				906A4DE31F167537000718C6 /* LaunchViewController.swift in Sources */,
 				906A4DEB1F167590000718C6 /* MoviesView.swift in Sources */,
+				902599211F16A2B200F3123E /* TVShowsView.swift in Sources */,
 				906A4DED1F167599000718C6 /* DetailsView.swift in Sources */,
-				906A4DDE1F16745C000718C6 /* AppNavigationController.swift in Sources */,
 				906A4DE91F167582000718C6 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LL5C5F8ENK;
 				INFOPLIST_FILE = PVMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mariecodes.PVMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LL5C5F8ENK;
 				INFOPLIST_FILE = PVMovies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mariecodes.PVMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,6 +469,7 @@
 				906A4DD91F16737C000718C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

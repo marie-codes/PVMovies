@@ -1,5 +1,5 @@
 //
-//  AppNavigationController.swift
+//  TVSeriesViewController.swift
 //  PVMovies
 //
 //  Created by Marie Park on 7/12/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppNavigationController: UINavigationController {
+class TVSeriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
