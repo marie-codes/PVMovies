@@ -33,15 +33,24 @@ class TVSeriesViewController: ShowViewController {
 extension TVSeriesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tvSeries.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CardHeaderTableViewCell.reuseID)!
+            let cell = tableView.dequeueReusableCell(withIdentifier: CardHeaderTableViewCell.reuseID) as! CardHeaderTableViewCell
+            cell.topShowsImageView.image = #imageLiteral(resourceName: "TopTVSeriesBanner")
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseID)!
+            let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseID) as! CardTableViewCell
+            let series = tvSeries[indexPath.row - 1]
+            if let image = series.posterImage {
+                cell.leftImageView.image = image
+            }
+            cell.titleLabel.text = series.title
+            cell.descriptionLabel.text = series.description
+            cell.ratingLabel.text = series.rating
+            cell.releaseDateLabel.text = series.releaseDate
             return cell
         }
     }
@@ -58,3 +67,4 @@ extension TVSeriesViewController: UITableViewDelegate {
         }
     }
 }
+

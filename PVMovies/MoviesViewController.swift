@@ -40,16 +40,33 @@ class MoviesViewController: ShowViewController {
                 self.moviesView.cardTableView.reloadData()
             }
             
-            MovieDBClient.getImages(forMovies: movies) { (movieImagesByID) in
-                for movie in self.movies {
-                    
-                    guard let image = movieImagesByID[movie.id] else {
-                        continue
-                    }
-                    
-                    movie.image = image
-                    self.moviesView.cardTableView.reloadData()
+            self.getMovieImages(ofType: .poster, forMovies: movies) {
+                self.getMovieImages(ofType: .wide, forMovies: movies)
+            }
+        }
+    }
+    
+    func getMovieImages(ofType type: MovieDBClient.ShowImageType, forMovies movies: [Show], completion: (() -> Void)? = nil) {
+        
+        MovieDBClient.getImages(ofType: type, forMovies: movies) { (movieImagesByID) in
+            
+            for movie in self.movies {
+                
+                guard let image = movieImagesByID[movie.id] else {
+                    continue
                 }
+                
+                switch type {
+                case .poster:
+                    movie.posterImage = image
+                case .wide:
+                    movie.wideImage = image
+                }
+            }
+            
+            if type == .poster {
+                self.moviesView.cardTableView.reloadData()
+                completion?()
             }
         }
     }
@@ -70,7 +87,7 @@ extension MoviesViewController: UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseID) as! CardTableViewCell
             let movie = movies[indexPath.row - 1]
-            if let image = movie.image {
+            if let image = movie.posterImage {
                 cell.leftImageView.image = image
             }
             cell.titleLabel.text = movie.title
@@ -91,5 +108,11 @@ extension MoviesViewController: UITableViewDelegate {
         } else {
             return 210
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let show = movies[indexPath.row]
+        let detailsViewController = DetailsViewController(show: show)
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }

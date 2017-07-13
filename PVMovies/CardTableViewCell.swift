@@ -27,7 +27,7 @@ class CardTableViewCell: UITableViewCell {
     
     let leftImageView: UIImageView = {
         let leftImageView = UIImageView()
-        leftImageView.backgroundColor = .darkBlue
+        leftImageView.backgroundColor = .black
         return leftImageView
     }()
     
@@ -153,7 +153,7 @@ class CardTableViewCell: UITableViewCell {
         }
         
         releaseDateCalendarImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(descriptionLabel.snp.bottom).offset(16)
+            make.top.greaterThanOrEqualTo(descriptionLabel.snp.bottom).offset(16)
             make.left.equalTo(descriptionLabel)
             make.bottom.equalToSuperview().inset(14)
             make.size.equalTo(12)

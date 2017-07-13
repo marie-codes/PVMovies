@@ -43,6 +43,10 @@ struct JSONParser {
                     continue
                 }
                 
+                guard let wideImageURLString = result["backdrop_path"] as? String else {
+                    continue
+                }
+                
                 guard let genreIDs = result["genre_ids"] as? [Int] else {
                     continue
                 }
@@ -57,21 +61,19 @@ struct JSONParser {
                 
                 let releaseYearIndex = releaseDate.index(releaseDate.startIndex, offsetBy: 4)
                 let releaseYear = releaseDate.substring(to: releaseYearIndex)
-
-                shows.append(Show(showType: .movie, imageURL: posterURLString, title: title, description: overview, releaseDate: releaseYear, rating: rating, id: showID, genreIDs: genreIDs))
                 
-                print(title)
-                print(overview)
-                print(rating)
-                print(posterURLString)
-                print(releaseYear)
-                print(genreIDs)
-                print(showID)
+                let show = Show(showType: .movie,
+                                posterImageURL: posterURLString,
+                                wideImageURL: wideImageURLString,
+                                title: title,
+                                description: overview,
+                                releaseDate: releaseYear,
+                                rating: rating,
+                                id: showID,
+                                genreIDs: genreIDs)
                 
+                shows.append(show)
             }
-            
-            print(results)
-            
         } catch {
             print(error.localizedDescription)
         }

@@ -12,8 +12,8 @@ class ShowViewController: UIViewController {
     
     // MARK: Life cycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setUp()
     }
     

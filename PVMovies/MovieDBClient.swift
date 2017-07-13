@@ -38,16 +38,21 @@ struct MovieDBClient {
             .resume()
     }
     
-    static func getImages(forMovies movies: [Show], completion: @escaping ([Int : UIImage]) -> Void) {
+    enum ShowImageType {
+        case poster
+        case wide
+    }
+    
+    static func getImages(ofType showImageType: ShowImageType, forMovies movies: [Show], completion: @escaping ([Int : UIImage]) -> Void) {
         
-        let posterBaseURLString = "https://image.tmdb.org/t/p/w154"
+        let baseURLString = "https://image.tmdb.org/t/p/\(showImageType == .poster ? "w154" : "w300")"
         var movieImagesByID: [Int : UIImage] = [:]
         
-        // Dispatch group for handling multiple requests
         let group = DispatchGroup()
         
         for movie in movies {
-            guard let posterURL = URL(string: posterBaseURLString + movie.imageURL) else {
+            
+            guard let posterURL = URL(string: baseURLString + (showImageType == .poster ? movie.posterImageURL : movie.wideImageURL)) else {
                 continue
             }
             
@@ -66,7 +71,7 @@ struct MovieDBClient {
                 .resume()
         }
         
-        group.notify(queue: .main) { 
+        group.notify(queue: showImageType == .poster ? .main : .global(qos: .background)) {
             completion(movieImagesByID)
         }
     }

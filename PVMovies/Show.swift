@@ -16,18 +16,22 @@ enum ShowType {
 class Show {
     
     let showType: ShowType
-    let imageURL: String
+    let posterImageURL: String
+    let wideImageURL: String
     let title: String
     let description: String
     let releaseDate: String
     let rating: String
     let id: Int
     let genreIDs: [Int]
-    var image: UIImage?
+    var genre: String?
+    var posterImage: UIImage?
+    var wideImage: UIImage?
     
-    init(showType: ShowType, imageURL: String, title: String, description: String, releaseDate: String, rating: String, id: Int, genreIDs: [Int]) {
+    init(showType: ShowType, posterImageURL: String, wideImageURL: String, title: String, description: String, releaseDate: String, rating: String, id: Int, genreIDs: [Int]) {
         self.showType = showType
-        self.imageURL = imageURL
+        self.posterImageURL = posterImageURL
+        self.wideImageURL = wideImageURL
         self.title = title
         self.description = description
         self.releaseDate = releaseDate
