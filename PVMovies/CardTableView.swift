@@ -38,8 +38,8 @@ class CardTableView: UITableView {
         
         // Define layout
         
-        rowHeight = 220
-        contentInset.top = 5
-        contentOffset.y = -5
+        rowHeight = 210
+        contentInset.top = 6
+        contentOffset.y = -6
     }
 }

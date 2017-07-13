@@ -12,5 +12,6 @@ extension UIColor {
     static let lightGreen: UIColor = UIColor(colorLiteralRed: 1 / 255, green: 210 / 255, blue: 119 / 255, alpha: 1)
     static let darkGreen: UIColor = UIColor(colorLiteralRed: 5 / 255, green: 44 / 255, blue: 44 / 255, alpha: 1)
     static let darkBlue: UIColor = UIColor(colorLiteralRed: 8 / 255, green: 28 / 255, blue: 36 / 255, alpha: 1)
+    static let detailGrey: UIColor = UIColor(colorLiteralRed: 166 / 255, green: 166 / 255, blue: 166 / 255, alpha: 1)
     static let backgroundGrey: UIColor = UIColor(colorLiteralRed: 235 / 255, green: 235 / 255, blue: 233 / 255, alpha: 1)
 }
