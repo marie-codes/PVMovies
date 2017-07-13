@@ -1,12 +1,15 @@
 # PVMovies
 
 
+
 ## Objective:
 Design and code a master-detail application that shows the top movies currently playing in US movie theaters.
 
 
+
 ## UX Wireframes:
 ![alt tag](https://github.com/marie-codes/PVMovies/blob/master/MovieApp_Wireframes.jpg)
+
 
 
 ## NOTE:
