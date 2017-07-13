@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-359.19999999999999" y="-2310.4947526236883"/>
         </scene>
-        <!--Main Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="lUK-T7-7pN">
             <objects>
-                <tabBarController id="Iny-fb-nwn" customClass="MainTabBarController" customModule="PVMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Iny-fb-nwn" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rD6-EH-hmE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -71,7 +71,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E67-cy-iIS" customClass="ShowNavigationController" customModule="PVMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Movies" id="QCl-EW-cJY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="W3J-e1-br5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W3J-e1-br5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -90,7 +90,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FfS-E5-M6u" customClass="ShowNavigationController" customModule="PVMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TV Series" id="J26-7j-Miy"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gRT-Fy-ubK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gRT-Fy-ubK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

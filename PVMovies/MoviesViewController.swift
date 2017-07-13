@@ -9,7 +9,7 @@
 import UIKit
 
 class MoviesViewController: ShowViewController {
-
+    
     // MARK: View
     
     var moviesView: MoviesView!
@@ -26,6 +26,32 @@ class MoviesViewController: ShowViewController {
         view = moviesView
         moviesView.cardTableView.dataSource = self
         moviesView.cardTableView.delegate = self
+        getMovies()
+    }
+    
+    // MARK: API request
+    
+    func getMovies() {
+        
+        MovieDBClient.getTopRatedMovies { (movies) in
+        
+            DispatchQueue.main.async {
+                self.movies = movies
+                self.moviesView.cardTableView.reloadData()
+            }
+            
+            MovieDBClient.getImages(forMovies: movies) { (movieImagesByID) in
+                for movie in self.movies {
+                    
+                    guard let image = movieImagesByID[movie.id] else {
+                        continue
+                    }
+                    
+                    movie.image = image
+                    self.moviesView.cardTableView.reloadData()
+                }
+            }
+        }
     }
 }
 
@@ -33,7 +59,7 @@ class MoviesViewController: ShowViewController {
 extension MoviesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return movies.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,7 +68,15 @@ extension MoviesViewController: UITableViewDataSource {
             cell.topShowsImageView.image = #imageLiteral(resourceName: "TopMoviesBanner")
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseID)!
+            let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseID) as! CardTableViewCell
+            let movie = movies[indexPath.row - 1]
+            if let image = movie.image {
+                cell.leftImageView.image = image
+            }
+            cell.titleLabel.text = movie.title
+            cell.descriptionLabel.text = movie.description
+            cell.ratingLabel.text = movie.rating
+            cell.releaseDateLabel.text = movie.releaseDate
             return cell
         }
     }

@@ -33,7 +33,6 @@ class CardTableViewCell: UITableViewCell {
     
     let titleLabel: UILabel = {
         let titleLabel = UILabel()
-        titleLabel.text = "This is title but it is dumb and long"
         titleLabel.numberOfLines = 2
         titleLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 14)
         return titleLabel
@@ -41,7 +40,6 @@ class CardTableViewCell: UITableViewCell {
     
     let ratingLabel: UILabel = {
         let ratingLabel = UILabel()
-        ratingLabel.text = "10.0"
         ratingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 14)
         return ratingLabel
     }()
@@ -61,7 +59,6 @@ class CardTableViewCell: UITableViewCell {
     
     let releaseDateLabel: UILabel = {
         let releaseDateLabel = UILabel()
-        releaseDateLabel.text = "2017"
         releaseDateLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
         releaseDateLabel.textColor = .detailGrey
         return releaseDateLabel
@@ -69,7 +66,6 @@ class CardTableViewCell: UITableViewCell {
     
     let genreLabel: UILabel = {
         let genreLabel = UILabel()
-        genreLabel.text = "Comedy"
         genreLabel.textAlignment = .right
         genreLabel.font = UIFont(name: "SourceSansPro-It", size: 12)
         genreLabel.textColor = .detailGrey
@@ -78,7 +74,6 @@ class CardTableViewCell: UITableViewCell {
     
     let descriptionLabel: UILabel = {
         let descriptionLabel = UILabel()
-        descriptionLabel.text = "This is a description, not a good one but maybe better than some? Not sure. This is a description, not a good one but maybe better than some? Not sure. This is a description, not a good one but maybe better than some? Not sure. This is a description, not a good one but maybe better than some? Not sure. This is a description, not a good one but maybe better than some? Not sure. This is a description, not a good one but maybe better than some? Not sure."
         descriptionLabel.numberOfLines = 0
         descriptionLabel.font = UIFont(name: "SourceSansPro-Light", size: 11)
         return descriptionLabel
