@@ -1,8 +1,8 @@
 # PVMovies
 
+
 ![alt tag](https://github.com/marie-codes/PVMovies/blob/master/logo.png)
 
-Design and code a master-detail application that shows the top movies currently playing in US movie theaters.
 
 
 
