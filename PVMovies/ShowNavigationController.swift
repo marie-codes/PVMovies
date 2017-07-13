@@ -52,7 +52,7 @@ class ShowNavigationController: UINavigationController {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = navigationBar.layer.bounds
-        gradientLayer.colors = [UIColor.darkBlue.cgColor, UIColor.darkGreen.cgColor]
+        gradientLayer.colors = [UIColor.darkGreen.cgColor, UIColor.darkBlue.cgColor]
         navigationBar.layer.addSublayer(gradientLayer)
     }
 }
