@@ -37,13 +37,25 @@ extension MoviesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseID)!
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CardHeaderTableViewCell.reuseID) as! CardHeaderTableViewCell
+            cell.topShowsImageView.image = #imageLiteral(resourceName: "TopMoviesBanner")
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCell.reuseID)!
+            return cell
+        }
     }
 }
 
 // MARK: - Table view delegate
 extension MoviesViewController: UITableViewDelegate {
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 120
+        } else {
+            return 210
+        }
+    }
 }

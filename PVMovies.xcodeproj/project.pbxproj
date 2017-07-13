@@ -11,6 +11,7 @@
 		9025991E1F16A1E300F3123E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9025991D1F16A1E300F3123E /* Launch.storyboard */; };
 		902599211F16A2B200F3123E /* TVSeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599201F16A2B200F3123E /* TVSeriesView.swift */; };
 		902599231F16A2BC00F3123E /* TVSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599221F16A2BC00F3123E /* TVSeriesViewController.swift */; };
+		9065CAD61F17128300B2A1C5 /* CardHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065CAD51F17128300B2A1C5 /* CardHeaderTableViewCell.swift */; };
 		906A4DC91F16737C000718C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DC81F16737C000718C6 /* AppDelegate.swift */; };
 		906A4DCE1F16737C000718C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCC1F16737C000718C6 /* Main.storyboard */; };
 		906A4DD01F16737C000718C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCF1F16737C000718C6 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		9025991D1F16A1E300F3123E /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		902599201F16A2B200F3123E /* TVSeriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSeriesView.swift; sourceTree = "<group>"; };
 		902599221F16A2BC00F3123E /* TVSeriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSeriesViewController.swift; sourceTree = "<group>"; };
+		9065CAD51F17128300B2A1C5 /* CardHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		906A4DC51F16737C000718C6 /* PVMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PVMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		906A4DC81F16737C000718C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		906A4DCD1F16737C000718C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				907263B51F16E280003F9A53 /* CardDisplayView.swift */,
 				9078F5261F16DD99009C798E /* CardTableView.swift */,
+				9065CAD51F17128300B2A1C5 /* CardHeaderTableViewCell.swift */,
 				907263B11F16DE4A003F9A53 /* CardTableViewCell.swift */,
 			);
 			name = Views;
@@ -413,6 +416,7 @@
 				9078F5271F16DD99009C798E /* CardTableView.swift in Sources */,
 				906A4DED1F167599000718C6 /* DetailsView.swift in Sources */,
 				908198511F16FE4B0051627D /* ShowNavigationController.swift in Sources */,
+				9065CAD61F17128300B2A1C5 /* CardHeaderTableViewCell.swift in Sources */,
 				906A4DE91F167582000718C6 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +543,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LL5C5F8ENK;
 				INFOPLIST_FILE = PVMovies/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mariecodes.PVMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -554,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LL5C5F8ENK;
 				INFOPLIST_FILE = PVMovies/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mariecodes.PVMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";

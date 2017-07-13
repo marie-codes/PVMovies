@@ -12,9 +12,15 @@ class LaunchViewController: UIViewController {
     
     // MARK: View
     
-    let launchView = LaunchView()
+    var launchView: LaunchView!
     
     // MARK: Life cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        launchView = LaunchView(frame: view.frame)
+        view = launchView
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

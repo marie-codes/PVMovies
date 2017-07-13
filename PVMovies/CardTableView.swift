@@ -27,8 +27,9 @@ class CardTableView: UITableView {
     
     func setUp() {
         
-        // Register table view cell type
+        // Register table view cell types
         
+        register(CardHeaderTableViewCell.self, forCellReuseIdentifier: CardHeaderTableViewCell.reuseID)
         register(CardTableViewCell.self, forCellReuseIdentifier: CardTableViewCell.reuseID)
         
         // Add style
@@ -36,9 +37,8 @@ class CardTableView: UITableView {
         separatorStyle = .none
         backgroundColor = .clear
         
-        // Define layout
+        // Define insets
         
-        rowHeight = 210
         contentInset.top = 6
         contentOffset.y = -6
     }

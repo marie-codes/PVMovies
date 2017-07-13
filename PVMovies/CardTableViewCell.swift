@@ -21,7 +21,6 @@ class CardTableViewCell: UITableViewCell {
         let cardView = UIView()
         cardView.backgroundColor = .white
         cardView.layer.shadowOpacity = 0.15
-        //        cardView.layer.shadowRadius = 4
         cardView.layer.shadowOffset = CGSize(width: 2, height: 3)
         return cardView
     }()
@@ -147,7 +146,7 @@ class CardTableViewCell: UITableViewCell {
         
         ratingStarImageView.snp.makeConstraints { (make) in
             make.left.equalTo(ratingLabel.snp.right).offset(4)
-            make.right.equalToSuperview().inset(12)
+            make.right.equalToSuperview().inset(11)
             make.centerY.equalTo(ratingLabel)
             make.size.equalTo(12)
         }
