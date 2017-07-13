@@ -16,15 +16,90 @@ class DetailsView: UIView {
     let cardView: UIView = {
         let cardView = UIView()
         cardView.backgroundColor = .white
-        cardView.layer.shadowOpacity = 0.15
+        cardView.layer.shadowOpacity = 0.25
+        cardView.layer.shadowRadius = 6
         cardView.layer.shadowOffset = CGSize(width: 2, height: 3)
         return cardView
     }()
     
     let topImageView: UIImageView = {
         let topImageView = UIImageView()
-        topImageView.contentMode = .scaleAspectFit
+        topImageView.backgroundColor = .black
         return topImageView
+    }()
+    
+    let descriptionLabel: UILabel = {
+        let descriptionLabel = UILabel()
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.font = UIFont(name: "SourceSansPro-Light", size: 11)
+        return descriptionLabel
+    }()
+    
+    let bottomContainerView: UIView = {
+        let bottomContainerView = UIView()
+        return bottomContainerView
+    }()
+    
+    let dividerView: UIView = {
+        let dividerView = UIView()
+        dividerView.backgroundColor = .lightGray
+        return dividerView
+    }()
+    
+    let releaseDateLeadingLabel: UILabel = {
+        let releaseDateLeadingLabel = UILabel()
+        releaseDateLeadingLabel.text = "Release Date: "
+        releaseDateLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 14)
+        releaseDateLeadingLabel.textColor = .lightGreen
+        return releaseDateLeadingLabel
+    }()
+
+    let releaseDateDataLabel: UILabel = {
+        let releaseDateDataLabel = UILabel()
+        releaseDateDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        return releaseDateDataLabel
+    }()
+    
+    let genreLeadingLabel: UILabel = {
+        let genreLeadingLabel = UILabel()
+        genreLeadingLabel.text = "Genre: "
+        genreLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 14)
+        genreLeadingLabel.textColor = .lightGreen
+        return genreLeadingLabel
+    }()
+    
+    let genreDataLabel: UILabel = {
+        let genreDataLabel = UILabel()
+        genreDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        return genreDataLabel
+    }()
+    
+    let budgetLeadingLabel: UILabel = {
+        let budgetLeadingLabel = UILabel()
+        budgetLeadingLabel.text = "Budget: "
+        budgetLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 14)
+        budgetLeadingLabel.textColor = .lightGreen
+        return budgetLeadingLabel
+    }()
+    
+    let budgetDataLabel: UILabel = {
+        let budgetDataLabel = UILabel()
+        budgetDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        return budgetDataLabel
+    }()
+    
+    let productionLeadingLabel: UILabel = {
+        let productionLeadingLabel = UILabel()
+        productionLeadingLabel.text = "Budget: "
+        productionLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 14)
+        productionLeadingLabel.textColor = .lightGreen
+        return productionLeadingLabel
+    }()
+    
+    let productionDataLabel: UILabel = {
+        let productionDataLabel = UILabel()
+        productionDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        return productionDataLabel
     }()
     
     // MARK: Initialization
@@ -51,7 +126,18 @@ class DetailsView: UIView {
         // Add subviews
         
         addSubview(cardView)
-        addSubview(topImageView)
+        cardView.addSubview(topImageView)
+        cardView.addSubview(descriptionLabel)
+        cardView.addSubview(bottomContainerView)
+        bottomContainerView.addSubview(dividerView)
+        bottomContainerView.addSubview(releaseDateLeadingLabel)
+        bottomContainerView.addSubview(releaseDateDataLabel)
+        bottomContainerView.addSubview(genreLeadingLabel)
+        bottomContainerView.addSubview(genreDataLabel)
+        bottomContainerView.addSubview(budgetLeadingLabel)
+        bottomContainerView.addSubview(budgetDataLabel)
+        bottomContainerView.addSubview(productionLeadingLabel)
+        bottomContainerView.addSubview(productionDataLabel)
         
         // Define layout
         
@@ -63,7 +149,24 @@ class DetailsView: UIView {
         
         topImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-            make.height.equalTo(250)
+            make.height.equalTo(210)
+        }
+        
+        descriptionLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(topImageView.snp.bottom).offset(14)
+            make.left.right.equalToSuperview().inset(12)
+        }
+        
+        bottomContainerView.snp.makeConstraints { (make) in
+            make.top.greaterThanOrEqualTo(descriptionLabel.snp.bottom).offset(14)
+            make.left.right.equalTo(descriptionLabel)
+            make.bottom.equalToSuperview().inset(14)
+            make.height.equalTo(150)
+        }
+        
+        dividerView.snp.makeConstraints { (make) in
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(2)
         }
     }
     
@@ -71,5 +174,6 @@ class DetailsView: UIView {
     
     func display(show: Show) {
         topImageView.image = show.wideImage
+        descriptionLabel.text = show.description
     }
 }
