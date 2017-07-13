@@ -40,6 +40,7 @@ class CardTableView: UITableView {
         // Define insets
         
         contentInset.top = 6
+        contentInset.bottom = 6
         contentOffset.y = -6
     }
 }

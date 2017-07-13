@@ -10,12 +10,6 @@ import UIKit
 
 class LaunchViewController: UIViewController {
     
-    // MARK: Status bar
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     // MARK: View
     
     var launchView: LaunchView!
@@ -32,7 +26,11 @@ class LaunchViewController: UIViewController {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             self.launchView.animateLogo {
-                (UIApplication.shared.delegate as? AppDelegate)?.setUpMainApp()
+                guard let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() else {
+                    print("An error occurred while setting up the main app after launch.")
+                    return
+                }
+                self.present(mainTabBarController, animated: true)
             }
         }
     }

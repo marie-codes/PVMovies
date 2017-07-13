@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class MoviesViewController: ShowViewController {
 
     // MARK: View
     

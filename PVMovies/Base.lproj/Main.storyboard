@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-359.19999999999999" y="-2310.4947526236883"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="lUK-T7-7pN">
             <objects>
-                <tabBarController id="Iny-fb-nwn" sceneMemberID="viewController">
+                <tabBarController id="Iny-fb-nwn" customClass="MainTabBarController" customModule="PVMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rD6-EH-hmE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

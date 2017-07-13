@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TVSeriesViewController: UIViewController {
+class TVSeriesViewController: ShowViewController {
     
     // MARK: View
     

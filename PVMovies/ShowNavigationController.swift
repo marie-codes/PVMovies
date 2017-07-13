@@ -34,11 +34,6 @@ class ShowNavigationController: UINavigationController {
     
     func setUp() {
         
-        // Remove navigation bar drop shadow
-        
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationBar.shadowImage = UIImage()
-        
         // Add status bar background to navigation bar
         
         view.addSubview(statusBarBackgroundView)
@@ -46,6 +41,12 @@ class ShowNavigationController: UINavigationController {
             make.top.left.right.equalToSuperview()
             make.height.equalTo(UIApplication.shared.statusBarFrame.height)
         }
+        
+        // Change navigation bar tint color and remove drop shadow
+        
+        navigationBar.tintColor = .white
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
         
         // Add gradient background to navigation bar
         
