@@ -10,6 +10,12 @@ import UIKit
 
 class LaunchViewController: UIViewController {
     
+    // MARK: Status bar
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     // MARK: View
     
     var launchView: LaunchView!

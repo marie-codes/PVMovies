@@ -1,12 +1,15 @@
 PODS:
+  - SideMenu (2.3.2)
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
+  - SideMenu
   - SnapKit
 
 SPEC CHECKSUMS:
+  SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 6d7debf8a812b53d37b70bd5443308cda1dbaa68
+PODFILE CHECKSUM: 538bc318bb26f3ef1df07c29dca7095b0eecf7b5
 
 COCOAPODS: 1.2.1
