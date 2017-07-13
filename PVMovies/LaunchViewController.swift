@@ -12,7 +12,7 @@ class LaunchViewController: UIViewController {
     
     // MARK: View
     
-    @IBOutlet var launchView: LaunchView!
+    let launchView = LaunchView()
     
     // MARK: Life cycle
     

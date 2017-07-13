@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		383B0F812EA49AF1A400E62A /* Pods_PVMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56D82A9C41DFC2CBE0FEE36 /* Pods_PVMovies.framework */; };
 		9025991E1F16A1E300F3123E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9025991D1F16A1E300F3123E /* Launch.storyboard */; };
-		902599211F16A2B200F3123E /* TVShowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599201F16A2B200F3123E /* TVShowsView.swift */; };
-		902599231F16A2BC00F3123E /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599221F16A2BC00F3123E /* TVShowsViewController.swift */; };
+		902599211F16A2B200F3123E /* TVSeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599201F16A2B200F3123E /* TVSeriesView.swift */; };
+		902599231F16A2BC00F3123E /* TVSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902599221F16A2BC00F3123E /* TVSeriesViewController.swift */; };
 		906A4DC91F16737C000718C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DC81F16737C000718C6 /* AppDelegate.swift */; };
 		906A4DCE1F16737C000718C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCC1F16737C000718C6 /* Main.storyboard */; };
 		906A4DD01F16737C000718C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 906A4DCF1F16737C000718C6 /* Assets.xcassets */; };
@@ -21,14 +21,31 @@
 		906A4DE91F167582000718C6 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DE81F167582000718C6 /* DetailsViewController.swift */; };
 		906A4DEB1F167590000718C6 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DEA1F167590000718C6 /* MoviesView.swift */; };
 		906A4DED1F167599000718C6 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906A4DEC1F167599000718C6 /* DetailsView.swift */; };
+		907263B21F16DE4A003F9A53 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907263B11F16DE4A003F9A53 /* CardTableViewCell.swift */; };
+		907263B41F16DF10003F9A53 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907263B31F16DF10003F9A53 /* UIColorExtensions.swift */; };
+		907263B61F16E280003F9A53 /* CardDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907263B51F16E280003F9A53 /* CardDisplayView.swift */; };
 		9078F5271F16DD99009C798E /* CardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078F5261F16DD99009C798E /* CardTableView.swift */; };
+		908198331F16E9080051627D /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908198321F16E9080051627D /* Show.swift */; };
+		908198421F16FA340051627D /* SourceSansPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 908198361F16FA340051627D /* SourceSansPro-Black.otf */; };
+		908198431F16FA340051627D /* SourceSansPro-BlackIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 908198371F16FA340051627D /* SourceSansPro-BlackIt.otf */; };
+		908198441F16FA340051627D /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 908198381F16FA340051627D /* SourceSansPro-Bold.otf */; };
+		908198451F16FA340051627D /* SourceSansPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 908198391F16FA340051627D /* SourceSansPro-BoldIt.otf */; };
+		908198461F16FA340051627D /* SourceSansPro-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9081983A1F16FA340051627D /* SourceSansPro-ExtraLight.otf */; };
+		908198471F16FA340051627D /* SourceSansPro-ExtraLightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9081983B1F16FA340051627D /* SourceSansPro-ExtraLightIt.otf */; };
+		908198481F16FA340051627D /* SourceSansPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9081983C1F16FA340051627D /* SourceSansPro-It.otf */; };
+		908198491F16FA340051627D /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9081983D1F16FA340051627D /* SourceSansPro-Light.otf */; };
+		9081984A1F16FA340051627D /* SourceSansPro-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9081983E1F16FA340051627D /* SourceSansPro-LightIt.otf */; };
+		9081984B1F16FA340051627D /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9081983F1F16FA340051627D /* SourceSansPro-Regular.otf */; };
+		9081984C1F16FA340051627D /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 908198401F16FA340051627D /* SourceSansPro-Semibold.otf */; };
+		9081984D1F16FA340051627D /* SourceSansPro-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 908198411F16FA340051627D /* SourceSansPro-SemiboldIt.otf */; };
+		908198511F16FE4B0051627D /* ShowNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908198501F16FE4B0051627D /* ShowNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A61A351DBEBF86926F7989B /* Pods-PVMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVMovies.release.xcconfig"; path = "Pods/Target Support Files/Pods-PVMovies/Pods-PVMovies.release.xcconfig"; sourceTree = "<group>"; };
 		9025991D1F16A1E300F3123E /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		902599201F16A2B200F3123E /* TVShowsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsView.swift; sourceTree = "<group>"; };
-		902599221F16A2BC00F3123E /* TVShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
+		902599201F16A2B200F3123E /* TVSeriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSeriesView.swift; sourceTree = "<group>"; };
+		902599221F16A2BC00F3123E /* TVSeriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVSeriesViewController.swift; sourceTree = "<group>"; };
 		906A4DC51F16737C000718C6 /* PVMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PVMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		906A4DC81F16737C000718C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		906A4DCD1F16737C000718C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,7 +58,24 @@
 		906A4DE81F167582000718C6 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		906A4DEA1F167590000718C6 /* MoviesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		906A4DEC1F167599000718C6 /* DetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		907263B11F16DE4A003F9A53 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		907263B31F16DF10003F9A53 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		907263B51F16E280003F9A53 /* CardDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDisplayView.swift; sourceTree = "<group>"; };
 		9078F5261F16DD99009C798E /* CardTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableView.swift; sourceTree = "<group>"; };
+		908198321F16E9080051627D /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		908198361F16FA340051627D /* SourceSansPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.otf"; sourceTree = "<group>"; };
+		908198371F16FA340051627D /* SourceSansPro-BlackIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackIt.otf"; sourceTree = "<group>"; };
+		908198381F16FA340051627D /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		908198391F16FA340051627D /* SourceSansPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldIt.otf"; sourceTree = "<group>"; };
+		9081983A1F16FA340051627D /* SourceSansPro-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.otf"; sourceTree = "<group>"; };
+		9081983B1F16FA340051627D /* SourceSansPro-ExtraLightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightIt.otf"; sourceTree = "<group>"; };
+		9081983C1F16FA340051627D /* SourceSansPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-It.otf"; sourceTree = "<group>"; };
+		9081983D1F16FA340051627D /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
+		9081983E1F16FA340051627D /* SourceSansPro-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightIt.otf"; sourceTree = "<group>"; };
+		9081983F1F16FA340051627D /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
+		908198401F16FA340051627D /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
+		908198411F16FA340051627D /* SourceSansPro-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldIt.otf"; sourceTree = "<group>"; };
+		908198501F16FE4B0051627D /* ShowNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNavigationController.swift; sourceTree = "<group>"; };
 		B048F40410FEF04E5C3A198E /* Pods-PVMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVMovies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PVMovies/Pods-PVMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		D56D82A9C41DFC2CBE0FEE36 /* Pods_PVMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PVMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,8 +104,8 @@
 		9025991F1F16A27300F3123E /* TVSeriesModule */ = {
 			isa = PBXGroup;
 			children = (
-				902599221F16A2BC00F3123E /* TVShowsViewController.swift */,
-				902599201F16A2B200F3123E /* TVShowsView.swift */,
+				902599221F16A2BC00F3123E /* TVSeriesViewController.swift */,
+				902599201F16A2B200F3123E /* TVSeriesView.swift */,
 			);
 			name = TVSeriesModule;
 			sourceTree = "<group>";
@@ -79,7 +113,9 @@
 		902599241F16A2FF00F3123E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				9078F5261F16DD99009C798E /* CardTableView.swift */,
+				908198521F16FE4F0051627D /* Controllers */,
+				908198301F16E8CC0051627D /* Views */,
+				908198311F16E8DB0051627D /* Models */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -111,6 +147,7 @@
 				9025991F1F16A27300F3123E /* TVSeriesModule */,
 				906A4DE11F167505000718C6 /* DetailsModule */,
 				902599241F16A2FF00F3123E /* Shared */,
+				908198341F16F18B0051627D /* Extensions */,
 				906A4DDB1F16739C000718C6 /* Supporting */,
 			);
 			path = PVMovies;
@@ -119,6 +156,7 @@
 		906A4DDB1F16739C000718C6 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				908198351F16FA150051627D /* Fonts */,
 				906A4DCF1F16737C000718C6 /* Assets.xcassets */,
 				906A4DD11F16737C000718C6 /* LaunchScreen.storyboard */,
 				906A4DD41F16737C000718C6 /* Info.plist */,
@@ -161,6 +199,59 @@
 				906A4DEC1F167599000718C6 /* DetailsView.swift */,
 			);
 			name = DetailsModule;
+			sourceTree = "<group>";
+		};
+		908198301F16E8CC0051627D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				907263B51F16E280003F9A53 /* CardDisplayView.swift */,
+				9078F5261F16DD99009C798E /* CardTableView.swift */,
+				907263B11F16DE4A003F9A53 /* CardTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		908198311F16E8DB0051627D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				908198321F16E9080051627D /* Show.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		908198341F16F18B0051627D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				907263B31F16DF10003F9A53 /* UIColorExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		908198351F16FA150051627D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				908198361F16FA340051627D /* SourceSansPro-Black.otf */,
+				908198371F16FA340051627D /* SourceSansPro-BlackIt.otf */,
+				908198381F16FA340051627D /* SourceSansPro-Bold.otf */,
+				908198391F16FA340051627D /* SourceSansPro-BoldIt.otf */,
+				9081983A1F16FA340051627D /* SourceSansPro-ExtraLight.otf */,
+				9081983B1F16FA340051627D /* SourceSansPro-ExtraLightIt.otf */,
+				9081983C1F16FA340051627D /* SourceSansPro-It.otf */,
+				9081983D1F16FA340051627D /* SourceSansPro-Light.otf */,
+				9081983E1F16FA340051627D /* SourceSansPro-LightIt.otf */,
+				9081983F1F16FA340051627D /* SourceSansPro-Regular.otf */,
+				908198401F16FA340051627D /* SourceSansPro-Semibold.otf */,
+				908198411F16FA340051627D /* SourceSansPro-SemiboldIt.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		908198521F16FE4F0051627D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				908198501F16FE4B0051627D /* ShowNavigationController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		B4FD271CD3F669F803973B8E /* Frameworks */ = {
@@ -234,9 +325,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908198481F16FA340051627D /* SourceSansPro-It.otf in Resources */,
+				908198431F16FA340051627D /* SourceSansPro-BlackIt.otf in Resources */,
+				908198451F16FA340051627D /* SourceSansPro-BoldIt.otf in Resources */,
+				9081984D1F16FA340051627D /* SourceSansPro-SemiboldIt.otf in Resources */,
+				908198461F16FA340051627D /* SourceSansPro-ExtraLight.otf in Resources */,
+				9081984C1F16FA340051627D /* SourceSansPro-Semibold.otf in Resources */,
+				908198441F16FA340051627D /* SourceSansPro-Bold.otf in Resources */,
+				9081984A1F16FA340051627D /* SourceSansPro-LightIt.otf in Resources */,
+				9081984B1F16FA340051627D /* SourceSansPro-Regular.otf in Resources */,
 				906A4DD31F16737C000718C6 /* LaunchScreen.storyboard in Resources */,
+				908198491F16FA340051627D /* SourceSansPro-Light.otf in Resources */,
 				906A4DD01F16737C000718C6 /* Assets.xcassets in Resources */,
 				9025991E1F16A1E300F3123E /* Launch.storyboard in Resources */,
+				908198421F16FA340051627D /* SourceSansPro-Black.otf in Resources */,
+				908198471F16FA340051627D /* SourceSansPro-ExtraLightIt.otf in Resources */,
 				906A4DCE1F16737C000718C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,15 +399,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				902599231F16A2BC00F3123E /* TVShowsViewController.swift in Sources */,
+				907263B61F16E280003F9A53 /* CardDisplayView.swift in Sources */,
+				902599231F16A2BC00F3123E /* TVSeriesViewController.swift in Sources */,
+				907263B41F16DF10003F9A53 /* UIColorExtensions.swift in Sources */,
+				907263B21F16DE4A003F9A53 /* CardTableViewCell.swift in Sources */,
+				908198331F16E9080051627D /* Show.swift in Sources */,
 				906A4DC91F16737C000718C6 /* AppDelegate.swift in Sources */,
 				906A4DE71F16756D000718C6 /* MoviesViewController.swift in Sources */,
 				906A4DE51F16755B000718C6 /* LaunchView.swift in Sources */,
 				906A4DE31F167537000718C6 /* LaunchViewController.swift in Sources */,
 				906A4DEB1F167590000718C6 /* MoviesView.swift in Sources */,
-				902599211F16A2B200F3123E /* TVShowsView.swift in Sources */,
+				902599211F16A2B200F3123E /* TVSeriesView.swift in Sources */,
 				9078F5271F16DD99009C798E /* CardTableView.swift in Sources */,
 				906A4DED1F167599000718C6 /* DetailsView.swift in Sources */,
+				908198511F16FE4B0051627D /* ShowNavigationController.swift in Sources */,
 				906A4DE91F167582000718C6 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

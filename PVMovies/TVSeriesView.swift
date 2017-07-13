@@ -1,5 +1,5 @@
 //
-//  MoviesView.swift
+//  TVSeriesView.swift
 //  PVMovies
 //
 //  Created by Marie Park on 7/12/17.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MoviesView: CardDisplayView {
-    
+class TVSeriesView: CardDisplayView {
+
     // MARK: Initialization
     
     override init(frame: CGRect) {

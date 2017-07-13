@@ -1,5 +1,5 @@
 //
-//  CardTableView.swift
+//  CardDisplayView.swift
 //  PVMovies
 //
 //  Created by Marie Park on 7/12/17.
@@ -9,12 +9,16 @@
 import SnapKit
 import UIKit
 
-class CardTableView: UITableView {
+class CardDisplayView: UIView {
 
+    // MARK: Subviews
+    
+    let cardTableView = CardTableView()
+    
     // MARK: Initialization
     
-    init() {
-        super.init(frame: .zero, style: .plain)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setUp()
     }
     
@@ -27,19 +31,19 @@ class CardTableView: UITableView {
     
     func setUp() {
         
-        // Register table view cell type
-        
-        register(CardTableViewCell.self, forCellReuseIdentifier: CardTableViewCell.reuseID)
-        
         // Add style
         
-        separatorStyle = .none
-        backgroundColor = .clear
+        backgroundColor = .backgroundGrey
+        
+        // Add subviews
+        
+        addSubview(cardTableView)
         
         // Define layout
         
-        rowHeight = 220
-        contentInset.top = 5
-        contentOffset.y = -5
+        cardTableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
 }
+
