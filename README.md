@@ -8,7 +8,7 @@ Design and code a master-detail application that shows the top movies currently 
 
 ## UX Wireframes:
 
-![alt tag](https://github.com/marie-codes/PVMovies/blob/master/wireframes-layout.png)
+![alt tag](https://github.com/marie-codes/PVMovies/blob/master/wireframes%20layout.jpg)
 
 
 ## Note:
