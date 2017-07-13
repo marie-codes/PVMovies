@@ -30,7 +30,7 @@ class DetailsView: UIView {
     let descriptionLabel: UILabel = {
         let descriptionLabel = UILabel()
         descriptionLabel.numberOfLines = 0
-        descriptionLabel.font = UIFont(name: "SourceSansPro-Light", size: 12)
+        descriptionLabel.font = UIFont(name: "SourceSansPro-Light", size: 14)
         return descriptionLabel
     }()
     
@@ -48,21 +48,21 @@ class DetailsView: UIView {
     let releaseDateLeadingLabel: UILabel = {
         let releaseDateLeadingLabel = UILabel()
         releaseDateLeadingLabel.text = "Release Date:  "
-        releaseDateLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 16)
+        releaseDateLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 15)
         releaseDateLeadingLabel.textColor = .lightGreen
         return releaseDateLeadingLabel
     }()
 
     let releaseDateDataLabel: UILabel = {
         let releaseDateDataLabel = UILabel()
-        releaseDateDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        releaseDateDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 13)
         return releaseDateDataLabel
     }()
     
     let genreLeadingLabel: UILabel = {
         let genreLeadingLabel = UILabel()
         genreLeadingLabel.text = "Genre:  "
-        genreLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 16)
+        genreLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 15)
         genreLeadingLabel.textColor = .lightGreen
         return genreLeadingLabel
     }()
@@ -70,14 +70,14 @@ class DetailsView: UIView {
     let genreDataLabel: UILabel = {
         let genreDataLabel = UILabel()
         genreDataLabel.text = "N / A"
-        genreDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        genreDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 13)
         return genreDataLabel
     }()
     
     let budgetLeadingLabel: UILabel = {
         let budgetLeadingLabel = UILabel()
         budgetLeadingLabel.text = "Budget:  "
-        budgetLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 16)
+        budgetLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 15)
         budgetLeadingLabel.textColor = .lightGreen
         return budgetLeadingLabel
     }()
@@ -85,21 +85,21 @@ class DetailsView: UIView {
     let budgetDataLabel: UILabel = {
         let budgetDataLabel = UILabel()
         budgetDataLabel.text = "N / A"
-        budgetDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        budgetDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 13)
         return budgetDataLabel
     }()
     
     let productionLeadingLabel: UILabel = {
         let productionLeadingLabel = UILabel()
         productionLeadingLabel.text = "Production Co:  "
-        productionLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 16)
+        productionLeadingLabel.font = UIFont(name: "SourceSansPro-Semibold", size: 15)
         productionLeadingLabel.textColor = .lightGreen
         return productionLeadingLabel
     }()
     
     let productionDataLabel: UILabel = {
         let productionDataLabel = UILabel()
-        productionDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 12)
+        productionDataLabel.font = UIFont(name: "SourceSansPro-Regular", size: 13)
         productionDataLabel.text = "N / A"
         return productionDataLabel
     }()
@@ -151,19 +151,18 @@ class DetailsView: UIView {
         
         topImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-            make.height.equalTo(210)
+            make.height.equalTo(200)
         }
         
         descriptionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(topImageView.snp.bottom).offset(12)
-            make.left.right.equalToSuperview().inset(18)
+            make.top.equalTo(topImageView.snp.bottom).offset(14)
+            make.left.right.equalToSuperview().inset(20)
         }
         
         bottomContainerView.snp.makeConstraints { (make) in
             make.top.greaterThanOrEqualTo(descriptionLabel.snp.bottom).offset(14)
             make.left.right.equalTo(descriptionLabel)
-            make.bottom.equalToSuperview().inset(18)
-            make.height.equalTo(120)
+            make.bottom.equalToSuperview().inset(22)
         }
         
         dividerView.snp.makeConstraints { (make) in
@@ -172,7 +171,7 @@ class DetailsView: UIView {
         }
         
         releaseDateLeadingLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().inset(14)
+            make.top.equalToSuperview().inset(16)
             make.left.equalToSuperview()
         }
         
@@ -183,7 +182,7 @@ class DetailsView: UIView {
         }
         
         genreLeadingLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(releaseDateLeadingLabel.snp.bottom).offset(14)
+            make.top.equalTo(releaseDateLeadingLabel.snp.bottom).offset(12)
             make.left.equalToSuperview()
         }
         
@@ -194,7 +193,7 @@ class DetailsView: UIView {
         }
         
         budgetLeadingLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(genreLeadingLabel.snp.bottom).offset(14)
+            make.top.equalTo(genreLeadingLabel.snp.bottom).offset(12)
             make.left.equalToSuperview()
         }
         
@@ -205,8 +204,9 @@ class DetailsView: UIView {
         }
         
         productionLeadingLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(budgetLeadingLabel.snp.bottom).offset(14)
+            make.top.equalTo(budgetLeadingLabel.snp.bottom).offset(12)
             make.left.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
         
         productionDataLabel.snp.makeConstraints { (make) in
